@@ -23,10 +23,22 @@ class RegistroActivity : AppCompatActivity() {
 
 
         val boton=findViewById<Button>(R.id.webbutton)
+        val carlos=findViewById<Button>(R.id.carlos)
+        val maria=findViewById<Button>(R.id.maria)
         boton.setOnClickListener {
             val url="https://github.com/Peluas9000/Kotlin_Zenobia"
             val intent= Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        }
 
+        carlos.setOnClickListener {
+            val intentoCarlos=Intent(this, SaludoActivity::class.java)
+            intentoCarlos.putExtra(Intent.EXTRA_TEXT,"CARLOS")
+            startActivity(intentoCarlos)
+        }
+        maria.setOnClickListener {
+            val intentoMaria= Intent(this, SaludoActivity::class.java)
+            intentoMaria.putExtra(Intent.EXTRA_TEXT,"MARIA")
+            startActivity(intentoMaria)
         }
 
 
